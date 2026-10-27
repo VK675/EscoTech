@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Tema da aplicação: Material 3 sem ActionBar (cada ecrã tem a sua Toolbar) -->
+    <style name="Theme.EscoTech" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaria</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/cartao</item>
+        <item name="colorOnPrimaryContainer">@color/primaria</item>
+        <item name="colorSecondary">@color/secundaria</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/cartao</item>
+        <item name="colorOnSecondaryContainer">@color/primaria</item>
+        <item name="colorTertiary">@color/destaque</item>
+        <item name="colorSurface">@color/fundo</item>
+        <item name="colorOnSurface">@color/texto</item>
+        <item name="colorOnSurfaceVariant">@color/texto_secundario</item>
+        <item name="colorOutline">@color/contorno</item>
+        <item name="android:colorBackground">@color/fundo</item>
+        <item name="android:windowBackground">@color/fundo</item>
+    </style>
+
+    <!-- Barra superior escura usada em todos os ecrãs -->
+    <style name="EscoTech.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/primaria</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="subtitleTextColor">@color/codigo_texto</item>
+        <item name="navigationIconTint">@color/white</item>
+    </style>
+
+    <!-- Cartão azul-claro usado nas listas e estatísticas -->
+    <style name="EscoTech.Cartao" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/cartao</item>
+        <item name="cardCornerRadius">16dp</item>
+    </style>
+
+    <!-- Campo de texto com contorno -->
+    <style name="EscoTech.Campo" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+    </style>
+
+    <!-- Botão principal (laranja de destaque) -->
+    <style name="EscoTech.BotaoDestaque" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/destaque</item>
+        <item name="android:textColor">@color/primaria</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="cornerRadius">14dp</item>
+    </style>
+
+    <!-- Opção de resposta no ecrã do desafio -->
+    <style name="EscoTech.Opcao" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:background">@drawable/bg_opcao</item>
+        <item name="android:buttonTint">@color/secundaria</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:textColor">@color/texto</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- Conteúdo dos cartões de estatísticas (perfil e painel do professor) -->
+    <style name="EscoTech.Estatistica" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="EscoTech.EstatisticaValor" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/primaria</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="EscoTech.EstatisticaRotulo" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/texto_secundario</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <!-- Título de secção -->
+    <style name="EscoTech.TituloSeccao" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/texto</item>
+    </style>
+</resources>

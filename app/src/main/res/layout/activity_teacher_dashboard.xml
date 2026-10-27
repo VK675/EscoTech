@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo"
+    android:orientation="vertical"
+    tools:context=".TeacherDashboardActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/EscoTech.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:title="@string/painel">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSair"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/sair"
+            android:textColor="@color/white" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Saudação -->
+            <TextView
+                android:id="@+id/tvSaudacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primaria"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="20dp"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:text="Olá, Ana! 👩‍🏫" />
+
+            <!-- Estatísticas -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="16dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/EscoTech.Cartao"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout style="@style/EscoTech.Estatistica">
+
+                        <TextView
+                            android:id="@+id/tvAlunosAtivos"
+                            style="@style/EscoTech.EstatisticaValor"
+                            android:text="-"
+                            tools:text="8/12" />
+
+                        <TextView
+                            style="@style/EscoTech.EstatisticaRotulo"
+                            android:text="@string/alunos_ativos" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/EscoTech.Cartao"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout style="@style/EscoTech.Estatistica">
+
+                        <TextView
+                            android:id="@+id/tvAtribuicoes"
+                            style="@style/EscoTech.EstatisticaValor"
+                            android:text="-"
+                            tools:text="5" />
+
+                        <TextView
+                            style="@style/EscoTech.EstatisticaRotulo"
+                            android:text="@string/atribuicoes" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/EscoTech.Cartao"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout style="@style/EscoTech.Estatistica">
+
+                        <TextView
+                            android:id="@+id/tvTaxaConclusao"
+                            style="@style/EscoTech.EstatisticaValor"
+                            android:text="-"
+                            tools:text="72%" />
+
+                        <TextView
+                            style="@style/EscoTech.EstatisticaRotulo"
+                            android:text="@string/taxa_conclusao" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Ações -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="12dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnNovoDesafio"
+                    style="@style/EscoTech.BotaoDestaque"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="@string/novo_desafio" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAtribuir"
+                    style="@style/Widget.Material3.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:minHeight="56dp"
+                    android:text="@string/atribuir"
+                    app:cornerRadius="14dp" />
+            </LinearLayout>
+
+            <!-- Atribuições -->
+            <TextView
+                style="@style/EscoTech.TituloSeccao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/as_minhas_atribuicoes" />
+
+            <TextView
+                android:id="@+id/tvSemAtribuicoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:text="@string/sem_atribuicoes"
+                android:textColor="@color/texto_secundario"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAtribuicoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:paddingHorizontal="16dp"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_assignment" />
+
+            <!-- Desafios do professor -->
+            <TextView
+                style="@style/EscoTech.TituloSeccao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/desafios_criados" />
+
+            <LinearLayout
+                android:id="@+id/semDesafios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sem_desafios_professor"
+                    android:textColor="@color/texto_secundario" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnExemplos"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adicionar_exemplos" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDesafios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="16dp"
+                android:clipToPadding="false"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_challenge" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

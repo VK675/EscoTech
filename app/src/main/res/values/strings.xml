@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">EscoTech</string>
+    <string name="slogan">Aprende C# a ganhar XP</string>
+
+    <!-- Comuns -->
+    <string name="email">Email</string>
+    <string name="palavra_passe">Palavra-passe</string>
+    <string name="nome">Nome</string>
+    <string name="turma">Turma (ex.: 12A)</string>
+    <string name="sair">Sair</string>
+    <string name="voltar">Voltar</string>
+    <string name="avatar">Avatar</string>
+
+    <!-- Login -->
+    <string name="entrar">Entrar</string>
+    <string name="bem_vindo">Bem-vindo de volta!</string>
+    <string name="sem_conta">Ainda não tens conta? <b>Criar conta</b></string>
+
+    <!-- Registo -->
+    <string name="criar_conta">Criar conta</string>
+    <string name="registo_titulo">Junta-te ao EscoTech</string>
+    <string name="papel">Sou…</string>
+    <string name="aluno">Aluno</string>
+    <string name="professor">Professor</string>
+    <string name="ja_tenho_conta">Já tens conta? <b>Entrar</b></string>
+
+    <!-- Aluno: início -->
+    <string name="desafios_disponiveis">Desafios disponíveis</string>
+    <string name="ranking">🏆  Ranking</string>
+    <string name="perfil">👤  Perfil</string>
+    <string name="sem_desafios">Ainda não há desafios. Pede ao teu professor para criar alguns!</string>
+
+    <!-- Desafio -->
+    <string name="desafio">Desafio</string>
+    <string name="escolhe_resposta">Escolhe a resposta certa</string>
+    <string name="confirmar">Confirmar resposta</string>
+
+    <!-- Ranking -->
+    <string name="ranking_titulo">Ranking da escola</string>
+    <string name="sem_alunos">Ainda não há alunos registados.</string>
+
+    <!-- Perfil -->
+    <string name="o_meu_perfil">O meu perfil</string>
+    <string name="nivel">Nível</string>
+    <string name="xp_total">XP total</string>
+    <string name="concluidos">Desafios feitos</string>
+    <string name="sequencia">Dias seguidos</string>
+    <string name="mudar_avatar">Toca no avatar para o mudar</string>
+    <string name="escolhe_avatar">Escolhe o teu avatar</string>
+
+    <!-- Professor: painel -->
+    <string name="painel">Painel do professor</string>
+    <string name="alunos_ativos">Alunos ativos\n(7 dias)</string>
+    <string name="atribuicoes">Atribuições</string>
+    <string name="taxa_conclusao">Taxa de\nconclusão</string>
+    <string name="novo_desafio">Novo desafio</string>
+    <string name="atribuir">Atribuir</string>
+    <string name="as_minhas_atribuicoes">As minhas atribuições</string>
+    <string name="sem_atribuicoes">Ainda não atribuíste desafios a nenhuma turma.</string>
+    <string name="desafios_criados">Desafios criados por mim</string>
+    <string name="sem_desafios_professor">Ainda não criaste desafios.</string>
+    <string name="adicionar_exemplos">Adicionar desafios de exemplo</string>
+
+    <!-- Criar desafio -->
+    <string name="criar_desafio">Criar desafio</string>
+    <string name="titulo">Título</string>
+    <string name="descricao">Descrição curta</string>
+    <string name="pergunta">Pergunta (pode incluir código C#)</string>
+    <string name="opcoes">Opções de resposta</string>
+    <string name="opcao_a">Opção A</string>
+    <string name="opcao_b">Opção B</string>
+    <string name="opcao_c">Opção C</string>
+    <string name="opcao_d">Opção D</string>
+    <string name="resposta_certa">Resposta certa</string>
+    <string name="dificuldade">Dificuldade</string>
+    <string name="iniciante">Iniciante</string>
+    <string name="intermedio">Intermédio</string>
+    <string name="xp_recompensa">XP de recompensa</string>
+    <string name="guardar_desafio">Guardar desafio</string>
+
+    <!-- Atribuir desafio -->
+    <string name="atribuir_desafio">Atribuir desafio</string>
+    <string name="passo_turma">1. Para que turma?</string>
+    <string name="passo_prazo">2. Até quando?</string>
+    <string name="escolher_prazo">Escolher prazo</string>
+    <string name="passo_desafio">3. Escolhe o desafio</string>
+    <string name="sem_desafios_atribuir">Ainda não há desafios. Cria um primeiro.</string>
+</resources>

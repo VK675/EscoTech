@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uma linha do ranking -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cartao"
+    style="@style/EscoTech.Cartao"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:strokeColor="@color/secundaria">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvPosicao"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/texto_secundario"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="🥇" />
+
+        <TextView
+            android:id="@+id/tvAvatar"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/bg_avatar"
+            android:gravity="center"
+            android:textSize="22sp"
+            tools:text="🦊" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/texto"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="Valerii" />
+
+            <TextView
+                android:id="@+id/tvDetalhe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/texto_secundario"
+                android:textSize="13sp"
+                tools:text="Nível 3 · 12A" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvXp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/destaque"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="245 XP" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

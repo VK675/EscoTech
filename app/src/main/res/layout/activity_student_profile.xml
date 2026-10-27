@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo"
+    android:orientation="vertical"
+    tools:context=".StudentProfileActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/EscoTech.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="@string/o_meu_perfil" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Cabeçalho com avatar e nome -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primaria"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="24dp">
+
+                <TextView
+                    android:id="@+id/tvAvatar"
+                    android:layout_width="104dp"
+                    android:layout_height="104dp"
+                    android:background="@drawable/bg_avatar"
+                    android:contentDescription="@string/avatar"
+                    android:gravity="center"
+                    android:textSize="52sp"
+                    tools:text="🦊" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/mudar_avatar"
+                    android:textColor="@color/codigo_texto"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvNome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:text="Valerii" />
+
+                <TextView
+                    android:id="@+id/tvEmailTurma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/destaque"
+                    android:textSize="14sp"
+                    tools:text="valerii@escola.pt · Turma 12A" />
+            </LinearLayout>
+
+            <!-- Estatísticas em grelha 2x2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="16dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/EscoTech.Cartao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout style="@style/EscoTech.Estatistica">
+
+                        <TextView
+                            android:id="@+id/tvNivel"
+                            style="@style/EscoTech.EstatisticaValor"
+                            tools:text="3" />
+
+                        <TextView
+                            style="@style/EscoTech.EstatisticaRotulo"
+                            android:text="@string/nivel" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/EscoTech.Cartao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout style="@style/EscoTech.Estatistica">
+
+                        <TextView
+                            android:id="@+id/tvXp"
+                            style="@style/EscoTech.EstatisticaValor"
+                            tools:text="245" />
+
+                        <TextView
+                            style="@style/EscoTech.EstatisticaRotulo"
+                            android:text="@string/xp_total" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/EscoTech.Cartao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout style="@style/EscoTech.Estatistica">
+
+                        <TextView
+                            android:id="@+id/tvConcluidos"
+                            style="@style/EscoTech.EstatisticaValor"
+                            tools:text="5" />
+
+                        <TextView
+                            android:id="@+id/tvConcluidosDetalhe"
+                            style="@style/EscoTech.EstatisticaRotulo"
+                            android:text="@string/concluidos" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/EscoTech.Cartao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout style="@style/EscoTech.Estatistica">
+
+                        <TextView
+                            android:id="@+id/tvSequencia"
+                            style="@style/EscoTech.EstatisticaValor"
+                            tools:text="🔥 3" />
+
+                        <TextView
+                            style="@style/EscoTech.EstatisticaRotulo"
+                            android:text="@string/sequencia" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSair"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:minHeight="52dp"
+                android:text="@string/sair" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

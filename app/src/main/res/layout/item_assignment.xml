@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uma atribuição no painel do professor -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/EscoTech.Cartao"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/texto"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="Ciclo for" />
+
+                <TextView
+                    android:id="@+id/tvTurmaPrazo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/texto_secundario"
+                    android:textSize="13sp"
+                    tools:text="Turma 12A · Prazo 24/10/2026" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvConcluidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/primaria"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="7/10" />
+        </LinearLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/barraConclusao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:indicatorColor="@color/secundaria"
+            app:trackColor="@color/white"
+            app:trackCornerRadius="4dp"
+            app:trackThickness="8dp"
+            tools:progress="70" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo"
+    android:orientation="vertical"
+    tools:context=".ChallengeActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/EscoTech.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="@string/desafio" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:id="@+id/conteudo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/texto"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:text="Ciclo for" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvDificuldade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_etiqueta"
+                        android:backgroundTint="@color/cartao"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:textColor="@color/secundaria"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        tools:text="Iniciante" />
+
+                    <TextView
+                        android:id="@+id/tvXp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_etiqueta"
+                        android:backgroundTint="@color/cartao"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:textColor="@color/destaque"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        tools:text="+50 XP" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvDescricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/texto_secundario"
+                    android:textSize="15sp"
+                    tools:text="Contar quantas vezes um ciclo é executado." />
+
+                <!-- Pergunta com letra monoespaçada, como num editor de código -->
+                <TextView
+                    android:id="@+id/tvPergunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_codigo"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="16dp"
+                    android:textColor="@color/codigo_texto"
+                    android:textIsSelectable="true"
+                    android:textSize="15sp"
+                    tools:text="for (int i = 0; i &lt; 5; i++)\n{\n    Console.Write(i);\n}" />
+
+                <TextView
+                    style="@style/EscoTech.TituloSeccao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/escolhe_resposta"
+                    android:textSize="16sp" />
+
+                <!-- As 4 opções de resposta -->
+                <RadioGroup
+                    android:id="@+id/grupoOpcoes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rbOpcao0"
+                        style="@style/EscoTech.Opcao"
+                        tools:text="12345" />
+
+                    <RadioButton
+                        android:id="@+id/rbOpcao1"
+                        style="@style/EscoTech.Opcao"
+                        tools:text="01234" />
+
+                    <RadioButton
+                        android:id="@+id/rbOpcao2"
+                        style="@style/EscoTech.Opcao"
+                        tools:text="012345" />
+
+                    <RadioButton
+                        android:id="@+id/rbOpcao3"
+                        style="@style/EscoTech.Opcao"
+                        tools:text="0123" />
+                </RadioGroup>
+
+                <!-- Resultado (aparece depois de confirmar) -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cartaoResultado"
+                    style="@style/EscoTech.Cartao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/tvResultadoTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            tools:text="🎉 Certo! +50 XP"
+                            tools:textColor="@color/sucesso" />
+
+                        <TextView
+                            android:id="@+id/tvResultadoTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@color/texto_secundario"
+                            android:textSize="15sp"
+                            tools:text="Tens agora 245 XP." />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnConfirmar"
+                    style="@style/EscoTech.BotaoDestaque"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/confirmar" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/progresso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/secundaria" />
+    </FrameLayout>
+</LinearLayout>

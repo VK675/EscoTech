@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "726678092416",
+    "project_id": "escotech-23c67",
+    "storage_bucket": "escotech-23c67.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726678092416:android:df1b9ac2e8d65ee8d18465",
+        "android_client_info": {
+          "package_name": "com.example.escotech"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF1u4tsyXulXpYMv6gbLtENWIt4fMC8bs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta EscoTech -->
+    <color name="fundo">#FFFFFF</color>
+    <color name="primaria">#1B2A4A</color>
+    <color name="destaque">#F5A623</color>
+    <color name="secundaria">#4AACDB</color>
+    <color name="cartao">#EEF6FF</color>
+
+    <!-- Cores de apoio -->
+    <color name="texto">#1B2A4A</color>
+    <color name="texto_secundario">#5C6B85</color>
+    <color name="contorno">#D3E3F5</color>
+    <color name="sucesso">#2E9E5B</color>
+    <color name="sucesso_fundo">#E3F5EA</color>
+    <color name="erro">#D64545</color>
+    <color name="erro_fundo">#FBE7E7</color>
+    <color name="codigo_texto">#E8F1FF</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Opção mostrada como certa depois de responder -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/sucesso_fundo" />
+    <stroke android:width="2dp" android:color="@color/sucesso" />
+    <corners android:radius="14dp" />
+</shape>

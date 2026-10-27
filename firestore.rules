@@ -1,0 +1,51 @@
+rules_version = '2';
+
+// Regras de segurança do Firestore para o EscoTech.
+// Copiar para: Consola do Firebase → Firestore Database → Regras → Publicar.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function autenticado() {
+      return request.auth != null;
+    }
+
+    function eProfessor() {
+      return autenticado() &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'teacher';
+    }
+
+    // Perfis: todos os utilizadores com sessão podem ler (para o ranking).
+    // Cada um só cria/altera o seu, começa com 0 XP e não pode mudar de papel.
+    match /users/{userId} {
+      allow read: if autenticado();
+      allow create: if request.auth.uid == userId
+        && request.resource.data.xp == 0
+        && request.resource.data.role in ['student', 'teacher'];
+      allow update: if request.auth.uid == userId
+        && request.resource.data.role == resource.data.role;
+    }
+
+    // Desafios: só professores criam; cada professor só altera/apaga os seus.
+    match /challenges/{challengeId} {
+      allow read: if autenticado();
+      allow create: if eProfessor() && request.resource.data.createdBy == request.auth.uid;
+      allow update, delete: if eProfessor() && resource.data.createdBy == request.auth.uid;
+    }
+
+    // Atribuições: mesmas regras dos desafios.
+    match /assignments/{assignmentId} {
+      allow read: if autenticado();
+      allow create: if eProfessor() && request.resource.data.createdBy == request.auth.uid;
+      allow update, delete: if eProfessor() && resource.data.createdBy == request.auth.uid;
+    }
+
+    // Respostas: o aluno só cria a sua, com id "uid_challengeId" (uma por desafio),
+    // e não as pode alterar depois.
+    match /submissions/{submissionId} {
+      allow read: if autenticado();
+      allow create: if autenticado()
+        && request.resource.data.userId == request.auth.uid
+        && submissionId == request.auth.uid + '_' + request.resource.data.challengeId;
+    }
+  }
+}

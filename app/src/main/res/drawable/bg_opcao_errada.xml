@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Opção escolhida pelo aluno quando está errada -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/erro_fundo" />
+    <stroke android:width="2dp" android:color="@color/erro" />
+    <corners android:radius="14dp" />
+</shape>
