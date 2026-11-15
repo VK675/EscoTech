@@ -1,10 +1,13 @@
 package com.example.escotech
 
+import android.R.attr.contentDescription
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
@@ -14,9 +17,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.escotech.R.drawable
 
 
 @Composable
@@ -26,6 +32,7 @@ var email by remember {mutableStateOf("")}
     var emailError by remember {mutableStateOf("")}
     var passwordError by remember {mutableStateOf("")}
     var loginMessage by remember {mutableStateOf("")}
+    var passwordVisible by remember {mutableStateOf(false)}
 
     Column(modifier = modifier
         .fillMaxSize()
@@ -48,9 +55,22 @@ var email by remember {mutableStateOf("")}
             value = password,
             onValueChange = {password = it},
             label = { Text( "Password")},
-            visualTransformation = PasswordVisualTransformation(),
+            visualTransformation = if(passwordVisible) VisualTransformation.None else
+                PasswordVisualTransformation(),
             isError = passwordError != "",
-            supportingText = {Text(passwordError)}
+            supportingText = {Text(passwordError)
+            },
+                    trailingIcon = {
+                        IconButton(onClick = { passwordVisible = !passwordVisible }) {
+                        Icon(
+                            painter = painterResource(
+                             if (passwordVisible) R.drawable.baseline_visibility_off_24
+                            else R.drawable.baseline_visibility_24
+                        ),
+                            contentDescription = "Mostrar password"
+                            )
+                    }
+            }
         )
 
         Button(onClick = {
