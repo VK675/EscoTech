@@ -26,7 +26,7 @@ import com.example.escotech.R.drawable
 
 
 @Composable
-fun LoginScreen(modifier: Modifier = Modifier){
+fun LoginScreen(modifier: Modifier = Modifier, onLogin: (String) -> Unit = {}){
 var email by remember {mutableStateOf("")}
     var password by remember {mutableStateOf("")}
     var emailError by remember {mutableStateOf("")}
@@ -99,7 +99,8 @@ var email by remember {mutableStateOf("")}
             if(emailError == "" && passwordError == ""){
 
                 if (email == "a2000@alunos.sefo.pt" && password == "12345"){
-                    loginMessage = "Login com sucesso"
+                    loginMessage = ""
+                    onLogin(email)
                 } else {
                     loginMessage = "Email ou pass incorretos"
                 }
